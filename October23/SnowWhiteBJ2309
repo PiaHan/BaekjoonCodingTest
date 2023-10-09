@@ -29,7 +29,7 @@ public class Main {
 	    			 for(int t = 2; t < 9; t++) {
 	    			    System.out.println(arr[t]);
 	    			 }
-
+ //Role or Return : 1) finish the method immediately, 2) return the value
 	    			 return;
 
 	    		 }
