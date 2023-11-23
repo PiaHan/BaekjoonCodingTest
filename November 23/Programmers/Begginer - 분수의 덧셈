@@ -1,0 +1,25 @@
+class Solution {
+    public int[] solution(int numer1, int denom1, int numer2, int denom2) {
+        int denom = denom1*denom2;
+        int numer = numer1*denom2 + numer2*denom1;
+        int gcdVal = gcd(denom, numer);
+        denom = denom / gcdVal;
+        numer = numer / gcdVal;
+        
+        int[] answer = {numer, denom};
+        return answer;
+    }
+    
+    public int gcd(int num1, int num2){
+        int a = Math.max(num1, num2);
+        int b = Math.min(num1, num2);
+        
+        while(b != 0){
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        
+        return a;
+    }
+}
