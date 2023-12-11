@@ -1,0 +1,17 @@
+import java.util.Arrays;
+
+class Solution {
+    public String solution(String my_string) {
+        String[] msArray = my_string.split("");
+        String answer = "";
+        String[] answerArray = new String[my_string.length()];
+        int j = 0;
+        for(int i = msArray.length; i > 0; i--){
+            answerArray[j] = msArray[i-1];
+            j++;
+        }
+        
+        answer = String.join("", answerArray);
+        return answer;
+    }
+}
