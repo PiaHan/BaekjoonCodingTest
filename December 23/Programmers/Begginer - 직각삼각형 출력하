@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        for(int i = 1; i <= n; i++){
+            String stars = "*".repeat(i); // i 개수만큼 *를 반복해서 문자열 생성
+            System.out.println(stars);
+        }
+    }
+}
