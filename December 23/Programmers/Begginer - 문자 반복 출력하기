@@ -1,0 +1,16 @@
+class Solution {
+    public String solution(String my_string, int n) {
+        String[] msArray = my_string.split("");
+        String[] answerArray = new String[my_string.length()*n];
+        int j = 0;
+        for(int i = 0; i < msArray.length; i++){
+            for(int t = 0; t < n; t++){
+                answerArray[j] = msArray[i];
+                j++;
+            }
+        }
+        
+        String answer =  String.join("", answerArray);
+        return answer;
+    }
+}
