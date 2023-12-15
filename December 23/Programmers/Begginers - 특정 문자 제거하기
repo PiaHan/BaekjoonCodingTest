@@ -1,0 +1,18 @@
+class Solution {
+    public String solution(String my_string, String letter) {
+        String answer = "";
+        String[] msArray = my_string.split("");
+        
+        String[] answerArray = new String[my_string.length()];
+        int j = 0;
+        for(int i = 0; i < my_string.length(); i++){
+            if(msArray[i].equals(letter)){
+                msArray[i] = "";
+            }
+        }
+        
+        answer = String.join("", msArray);
+        return answer;
+        
+    }
+}
