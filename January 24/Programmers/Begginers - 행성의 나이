@@ -1,0 +1,42 @@
+import java.util.Arrays;
+
+//나도 아스키 코드 이용해야 하는 건 아는데 그냥 빨리 풀고싶었음.
+class Solution {
+    public String solution(int age) {
+        
+        String str1 = Integer.toString(age);
+        
+        char[] arr = new char[str1.length()];
+        char[] arr2 = new char[str1.length()];
+        for (int i = 0; i < str1.length(); i++) {            
+            arr[i] = str1.charAt(i);        
+            System.out.println(arr[i]);
+            
+            if(arr[i] == '0'){
+                arr2[i] = 'a';
+            }else if(arr[i] == '1'){
+                 arr2[i] = 'b';
+            }else if(arr[i] == '2'){
+                 arr2[i] = 'c';
+            }else if(arr[i] == '3'){
+                 arr2[i] = 'd';
+            }else if(arr[i] == '4'){
+                 arr2[i] = 'e';
+            }else if(arr[i] == '5'){
+                 arr2[i] = 'f';
+            }else if(arr[i] == '6'){
+                 arr2[i] = 'g';
+            }else if(arr[i] == '7'){
+                 arr2[i] = 'h';
+            }else if(arr[i] == '8'){
+                 arr2[i] = 'i';
+            }else if(arr[i] == '9'){
+                 arr2[i] = 'j';
+            }
+        }
+
+        
+        String answer = new String(arr2);
+        return answer;
+    }
+}
