@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+
+class Solution {
+    public int[] solution(int[] emergency) {
+        int length_emr = emergency.length;
+        int[] newEmergency = new int[length_emr];
+        for(int i = 0; i < length_emr; i++){
+            newEmergency[i] = emergency[i];
+        }
+        Arrays.sort(newEmergency); 
+        //System.out.println("Sorted arr[] : " + Arrays.toString(emergency));
+        int[] revSortArray = new int[length_emr];
+        int j = 0;
+        //System.out.println("length : " + length_emr);
+        for(int i = length_emr-1; i >= 0; i--){
+            revSortArray[j] = newEmergency[i];
+            //System.out.println("t : " + emergency[i]);
+            j++;
+        }
+        System.out.println("Sorted arr[] : " + Arrays.toString(revSortArray));
+        int[] answer = new int[length_emr];
+        for(int i = 0; i < length_emr; i++){
+            for(int k = 0; k < length_emr; k++){
+                if(emergency[i] == revSortArray[k]){
+                    // System.out.println("negi : " + revSortArray[k]);
+                    // System.out.println("pang : " + emergency[i]);
+                    // System.out.println("tt : " + (k+1));
+                    // System.out.println("i : " + i);
+                    answer[i] = k+1;
+                }else{
+                    
+                }
+            }
+           
+        }
+        
+        return answer;
+    }
+}
