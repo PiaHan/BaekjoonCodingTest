@@ -1,0 +1,18 @@
+class Solution {
+    public String solution(String rsp) {
+        
+        String[] rsps = rsp.split("");
+        String answer = "";
+        for(int i = 0; i < rsps.length; i++){
+            if(rsps[i].equals("2")){
+                answer += "0";
+            }else if(rsps[i].equals("0")){
+                answer += "5";
+            }else if(rsps[i].equals("5")){
+                answer += "2";
+            }
+        }
+
+        return answer;
+    }
+}
