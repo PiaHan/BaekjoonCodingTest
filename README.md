@@ -1,6 +1,6 @@
 # BaekjoonCodingTest
 
-<p>이거 하는중<br>
+<p>지금 푸는 문제집<br>
 Doing this Coding test - code.plus<br>
 One or Two problems per day. 
 </p>
