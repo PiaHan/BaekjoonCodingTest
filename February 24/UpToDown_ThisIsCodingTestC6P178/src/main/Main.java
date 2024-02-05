@@ -1,0 +1,26 @@
+package main;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Main {
+	public static void main(String[] args) throws IOException {
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        
+        int numCount = Integer.parseInt(st.nextToken());
+        int[] numArray = new int[numCount];
+        for(int i = 0; i < numCount; i++) {
+        	st = new StringTokenizer(br.readLine());
+        	numArray[i] = Integer.parseInt(st.nextToken());
+        }
+ 
+        Arrays.sort(numArray);
+        System.out.println("answer : " + Arrays.toString(numArray));
+	}
+
+}
